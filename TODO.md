@@ -1,1 +1,2 @@
 - [] Change Footer Language buttons to Carousel
+- Add language dropdown on landing page header
