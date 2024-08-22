@@ -1,5 +1,5 @@
 type Props = {
-  activeCourse: any; //TODO: Replace with DB types
+  activeCourse: any; // TODO: Replace with DB types
   hearts: number;
   points: number;
   hasActiveSubscription: boolean;
