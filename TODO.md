@@ -1,2 +1,3 @@
 - [] Change Footer Language buttons to Carousel
-- Add language dropdown on landing page header
+- [] Add language dropdown on landing page header
+- [] components/user-progress.tsx:  Add streak and gems
