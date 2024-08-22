@@ -6,7 +6,12 @@ const LearnPage = () => {
   return ( 
     <div className="flex flex-row-reverse gap-[48px] px-6">
       <StickyWrapper>
-        My sticky Sidebar
+        <UserProgress
+          activeCourse={{}}
+          hearts={5}
+          points={100}
+          hasActiveSubscription={false}
+        />
       </StickyWrapper>
       <FeedWrapper>
         <Header title="Spanish (Prop)" />
