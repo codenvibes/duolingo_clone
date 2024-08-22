@@ -9,7 +9,7 @@ const LearnPage = () => {
         My sticky Sidebar
       </StickyWrapper>
       <FeedWrapper>
-        <Header title="Spanish (Prop)">
+        <Header title="Spanish (Prop)" />
       </FeedWrapper>
     </div>
   );
