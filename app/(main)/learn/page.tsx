@@ -8,10 +8,10 @@ const LearnPage = () => {
         My sticky Sidebar
       </StickyWrapper>
       <FeedWrapper>
-        My feed
+        <Header title="Spanish (Prop)">
       </FeedWrapper>
     </div>
   );
-}
+};
 
 export default LearnPage;
