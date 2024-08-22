@@ -1,5 +1,6 @@
 import { FeedWrapper } from "@/components/feed-wrapper";
 import { StickyWrapper } from "@/components/sticky-wrapper";
+import { Header } from "./header";
 
 const LearnPage = () => {
   return ( 
