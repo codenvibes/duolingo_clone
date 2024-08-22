@@ -2,7 +2,7 @@ type Props = {
   activeCourse: any; //TODO: Replace with DB types
   hearts: number;
   points: number;
-  hasActiveSubscriprion: boolean;
+  hasActiveSubscription: boolean;
 };
 
 export const UserProgress = ({}: Props) => {
