@@ -6,6 +6,9 @@ const LearnPage = () => {
       <StickyWrapper>
         My sticky Sidebar
       </StickyWrapper>
+      <FeedWrapper>
+        My feed
+      </FeedWrapper>
     </div>
   );
 }
