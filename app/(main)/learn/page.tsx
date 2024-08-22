@@ -15,7 +15,7 @@ const LearnPage = () => {
         />
       </StickyWrapper>
       <FeedWrapper>
-        <Header title="Spanish (Prop)" />
+        <Header title="Spanish" />
       </FeedWrapper>
     </div>
   );
