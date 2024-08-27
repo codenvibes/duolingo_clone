@@ -20,11 +20,11 @@ const main = async () => {
     await db.delete(schema.challengeProgress);
 
     await db.insert(schema.courses).values([
-      { id: 1, title: "Spanish", imageSrc: "/es.svg" },
-      { id: 2, title: "French", imageSrc: "/fr.svg" },
-      { id: 3, title: "Italian", imageSrc: "/it.svg" },
-      { id: 4, title: "Japanese", imageSrc: "/jp.svg" },
-      { id: 5, title: "Croatian", imageSrc: "/hr.svg" },
+      { id: 1, title: "Spanish", imageSrc: "assets/icons/flags/Spanish.svg" },
+      { id: 2, title: "Catalan", imageSrc: "assets/icons/flags/Catalan.svg" },
+      { id: 3, title: "Chinese", imageSrc: "assets/icons/flags/Chinese.svg" },
+      { id: 4, title: "Czech", imageSrc: "assets/icons/flags/Czech.svg" },
+      { id: 5, title: "Danish", imageSrc: "assets/icons/flags/Danish.svg" },
     ]);
 
     await db.insert(schema.units).values([
