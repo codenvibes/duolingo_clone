@@ -88,23 +88,23 @@ export const getCourseProgress = cache(async () => {
   }
 
   const unitsInActiveCourse = await db.query.units.findMany({
-      orderBy: (units, { asc }) => [asc(units.order)],
-      where: eq(units.courseId, userProgress.activeCourseId),
-      with: {
-          lessons: {
-              orderBy: (lessons, { asc }) => [asc(lessons.order)],
-              with: {
-                  unit: true,
-                  challenges: {
-                      with: {
-                          challengeProgress: {
-                              where: eq(challengeProgress.userId, userId),
-                          },
-                      }
-                  },
-              }
+    orderBy: (units, { asc }) => [asc(units.order)],
+    where: eq(units.courseId, userProgress.activeCourseId),
+    with: {
+      lessons: {
+        orderBy: (lessons, { asc }) => [asc(lessons.order)],
+        with: {
+          unit: true,
+          challenges: {
+            with: {
+              challengeProgress: {
+                where: eq(challengeProgress.userId, userId),
+              },
+            }
           },
+        }
       },
+    },
   });
 
   const firstUncompletedLesson = unitsInActiveCourse
