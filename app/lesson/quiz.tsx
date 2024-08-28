@@ -3,10 +3,11 @@
 import { useState } from "react";
 
 import { challengeOptions, challenges } from "@/db/schema";
+
 import { Header } from "./header";
 import { QuestionBubble } from "./question-bubble";
-import { Divide } from "lucide-react";
 import { Challenge } from "./challenge";
+import { Footer } from "./footer";
 
 type Props = {
   initialPercentage: number;
@@ -73,6 +74,11 @@ export const Quiz = ({ initialPercentage, initialHearts, initialLessonId, initia
           </div>
         </div>
       </div>
+      <Footer
+        disabled={!selectedOption}
+        status={status}
+        onCheck={() => {}}
+      />
     </>
   );
 };
