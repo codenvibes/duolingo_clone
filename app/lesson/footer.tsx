@@ -39,6 +39,15 @@ export const Footer = ({
             Try again.
           </div>
         )}
+        {status === "completed" && (
+          <Button
+            variant="default"
+            size={isMobile ? "sm" : "lg"}
+            onClick={() => window.location.href = `/lesson/${lessonId}`}
+          >
+            Practice again
+          </Button>
+        )}
         <Button
           disabled={disabled}
           className="ml-auto"
