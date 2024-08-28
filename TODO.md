@@ -1,3 +1,4 @@
 - [] Change Footer Language buttons to Carousel
 - [] Add language dropdown on landing page header
 - [] components/user-progress.tsx:  Add streak and gems
+- [] Investigate and fix the audio playback issue in the Card component.
