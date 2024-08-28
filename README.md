@@ -3,6 +3,8 @@
 
 This is a Duolingo-inspired language learning platform built as part of my software engineering course portfolio project. The application is designed to be both fun and educational, providing an engaging way for users to learn new languages while earning points, completing quests, and challenging their friends on the leaderboard.
 
+This project was created following [Codewithantonio's YouTube](https://www.youtube.com/watch?v=dP75Khfy4s4) tutorial.
+
 <br>
 
 ## Features
