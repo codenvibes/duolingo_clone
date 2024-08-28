@@ -44,9 +44,9 @@ const main = async () => {
     ]);
 
     await db.insert(schema.challengeOptions).values([
-      { id: 1, challengeId: 1, text: "el hombre", correct: true, imageSrc: "/man.svg", audioSrc: "/es_man.mp3" },
-      { id: 2, challengeId: 1, text: "la mujer", correct: false, imageSrc: "/woman.svg", audioSrc: "/es_woman.mp3" },
-      { id: 3, challengeId: 1, text: "el robot", correct: false, imageSrc: "/robot.svg", audioSrc: "/es_robot.mp3" },
+      { id: 1, challengeId: 1, text: "el hombre", correct: true, imageSrc: "/assets/images/man.svg", audioSrc: "/es_man.mp3" },
+      { id: 2, challengeId: 1, text: "la mujer", correct: false, imageSrc: "/assets/images/woman.svg", audioSrc: "/es_woman.mp3" },
+      { id: 3, challengeId: 1, text: "el nino", correct: false, imageSrc: "/assets/images/boy.svg", audioSrc: "/es_boy.mp3" },
     ]);
 
     console.log("Sedding finished");
