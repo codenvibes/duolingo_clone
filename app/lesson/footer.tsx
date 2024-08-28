@@ -33,6 +33,12 @@ export const Footer = ({
             Nicely Done!
           </div>
         )}
+        {status === "wrong" && (
+          <div className="text-rose-500 font-bold test-base lg:text-2xl flex items-center">
+            <XCircle className="h-6 w-6 lg:h-10 lg:w-10 mr-4" />
+            Try again.
+          </div>
+        )}
         <Button
           disabled={disabled}
           className="ml-auto"
