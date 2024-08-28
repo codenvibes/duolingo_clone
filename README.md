@@ -3,6 +3,8 @@
 
 This is a Duolingo-inspired language learning platform built as part of my software engineering course portfolio project. The application is designed to be both fun and educational, providing an engaging way for users to learn new languages while earning points, completing quests, and challenging their friends on the leaderboard.
 
+<br>
+
 ## Features
 
 - 🌐 **Next.js 14 & Server Actions**: Built with the latest version of Next.js, utilizing server actions for efficient handling of backend logic.
@@ -26,6 +28,8 @@ This is a Duolingo-inspired language learning platform built as part of my softw
 - 🚀 **Deployment on Vercel**: The app is deployed and hosted on Vercel for reliable and scalable performance.
 - 📱 **Mobile Responsiveness**: Fully responsive design ensuring a smooth experience across all devices.
 
+<br>
+
 ## Getting Started
 
 To get started with the project, clone the repository and follow the instructions below.
@@ -35,6 +39,8 @@ git clone https://github.com/yourusername/duolingo-clone.git
 cd duolingo-clone
 ```
 
+<br>
+
 ### Install Dependencies
 
 Make sure you have Node.js installed. Then, install the required dependencies:
@@ -43,9 +49,13 @@ Make sure you have Node.js installed. Then, install the required dependencies:
 npm install
 ```
 
+<br>
+
 ### Environment Variables
 
 Create a `.env.local` file in the root directory and add the necessary environment variables as outlined in the `.env.example` file.
+
+<br>
 
 ### Run the Development Server
 
@@ -57,9 +67,13 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application in action.
 
+<br>
+
 ### Deployment
 
 The application is deployed on Vercel. For deployment instructions, refer to [Vercel's documentation](https://vercel.com/docs).
+
+<br>
 
 ## Acknowledgments
 
@@ -68,6 +82,8 @@ The application is deployed on Vercel. For deployment instructions, refer to [Ve
 - **Clerk**: For handling authentication.
 - **NeonDB**: For database management.
 - **Stripe**: For payment processing.
+
+<br>
 
 ## License
 
