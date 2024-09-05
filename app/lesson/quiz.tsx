@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { toast } from "sonner";
+import { useAudio } from "react-use";
 
 import { reduceHearts } from "@/actions/user-progress";
 import { challengeOptions, challenges } from "@/db/schema";
@@ -30,6 +31,16 @@ export const Quiz = ({
   initialLessonChallenges,
   userSubscription
 }: Props) => {
+  const [
+    correctAudio,
+    _c,
+    correctControls,
+  ] = useAudio({ src: "/audio/correct_answer.mp3"});
+  const [
+    incorrectAudio,
+    _i,
+    incorrectControls,
+  ] = useAudio({ src: "/audio/incorrect_answer.mp3"});
   const [pending, startTransition] = useTransition();
 
   const [hearts, setHearts] = useState(initialHearts);
@@ -87,6 +98,7 @@ export const Quiz = ({
               return;
             }
 
+            correctControls.play();
             setStatus("correct");
             setPercentage((prev) => prev + 100 / challenges.length);
 
@@ -106,6 +118,7 @@ export const Quiz = ({
               return;
             }
 
+            incorrectControls.play();
             setStatus("wrong");
 
             if (!response?.error) {
@@ -123,6 +136,8 @@ export const Quiz = ({
 
   return (
     <>
+      {incorrectAudio}
+      {correctAudio}
       <Header
         hearts={hearts}
         percentage={percentage}
