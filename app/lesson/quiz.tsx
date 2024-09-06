@@ -3,6 +3,7 @@
 import { useState, useTransition } from "react";
 import { toast } from "sonner";
 import { useAudio } from "react-use";
+import Image from "next/image";
 
 import { reduceHearts } from "@/actions/user-progress";
 import { challengeOptions, challenges } from "@/db/schema";
@@ -12,6 +13,7 @@ import { Header } from "./header";
 import { QuestionBubble } from "./question-bubble";
 import { Challenge } from "./challenge";
 import { Footer } from "./footer";
+import { Resultcard } from "./result-card";
 
 type Props = {
   initialPercentage: number;
@@ -130,11 +132,40 @@ export const Quiz = ({
     }
   };
 
-  if (!challenge) {
+  // TODO: Remove true
+  if (true || !challenge) {
     return (
-      <div>
-        Finished the challenge!
-      </div>
+      <>
+        <div className="flex flex-col gap-y-4 lg:gap-y-8 max-w-lg mx-auto text-center items-center justify-center h-full">
+          <Image
+            src="/assets/images/finish.svg"
+            alt="Finish"
+            className="hidden lg:block"
+            height={100}
+            width={100}
+          />
+          <Image
+            src="/assets/images/finish.svg"
+            alt="Finish"
+            className="block lg:hidden"
+            height={50}
+            width={50}
+          />
+          <h1 className="text-xl lg:text-3xl font-bold text-neutral-700">
+            Great job! <br /> You&apos;ve completed the lesson.
+          </h1>
+          <div className="flex items-center gap-x-4 w-full">
+            <Resultcard
+              variant="points"
+              value={challenges.length * 10}
+            />
+            <Resultcard
+              variant="hearts"
+              value={hearts}
+            />
+          </div>
+        </div>
+      </>
     );
   }
 
