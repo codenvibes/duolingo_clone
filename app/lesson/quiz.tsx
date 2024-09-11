@@ -2,7 +2,8 @@
 
 import { toast } from "sonner";
 import Image from "next/image";
-import { useAudio } from "react-use";
+import Confetti from "react-confetti";
+import { useAudio, useWindowSize } from "react-use";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 
@@ -34,6 +35,8 @@ export const Quiz = ({
   initialLessonChallenges,
   userSubscription
 }: Props) => {
+  const { width, height } = useWindowSize();
+
   const router = useRouter();
 
   const [
@@ -140,6 +143,13 @@ export const Quiz = ({
   if (true || !challenge) {
     return (
       <>
+        <Confetti
+          width={width}
+          height={height}
+          recycle={false}
+          numberOfPieces={500}
+          tweenDuration={10000}
+        />
         <div className="flex flex-col gap-y-4 lg:gap-y-8 max-w-lg mx-auto text-center items-center justify-center h-full">
           <Image
             src="/assets/images/finish.svg"
