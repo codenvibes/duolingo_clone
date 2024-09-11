@@ -1,19 +1,20 @@
 "use client";
 
-import { useState, useTransition } from "react";
 import { toast } from "sonner";
-import { useAudio } from "react-use";
 import Image from "next/image";
+import { useAudio } from "react-use";
+import { useRouter } from "next/navigation";
+import { useState, useTransition } from "react";
 
 import { reduceHearts } from "@/actions/user-progress";
 import { challengeOptions, challenges } from "@/db/schema";
 import { upsertChallengeProgress } from "@/actions/challenge-progress";
 
 import { Header } from "./header";
-import { QuestionBubble } from "./question-bubble";
-import { Challenge } from "./challenge";
 import { Footer } from "./footer";
+import { Challenge } from "./challenge";
 import { Resultcard } from "./result-card";
+import { QuestionBubble } from "./question-bubble";
 
 type Props = {
   initialPercentage: number;
@@ -33,6 +34,8 @@ export const Quiz = ({
   initialLessonChallenges,
   userSubscription
 }: Props) => {
+  const router = useRouter();
+
   const [
     correctAudio,
     _c,
@@ -45,6 +48,7 @@ export const Quiz = ({
   ] = useAudio({ src: "/audio/incorrect_answer.mp3"});
   const [pending, startTransition] = useTransition();
 
+  const [lessonId] = useState(initialLessonId);
   const [hearts, setHearts] = useState(initialHearts);
   const [percentage, setPercentage] = useState(initialPercentage);
   const [challenges] = useState(initialLessonChallenges);
@@ -165,6 +169,11 @@ export const Quiz = ({
             />
           </div>
         </div>
+        <Footer
+          lessonId={lessonId}
+          status="completed"
+          onCheck={() => router.push("/learn")}
+        />
       </>
     );
   }
