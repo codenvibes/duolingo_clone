@@ -6,6 +6,8 @@ import { FeedWrapper } from "@/components/feedwrapper";
 import { UserProgress } from "@/components/userprogress";
 import { StickyWrapper } from "@/components/stickywrapper";
 
+import { Items } from "./items";
+
 const ShopPage = async () => {
   const userProgressData = getUserProgress();
 
@@ -40,9 +42,14 @@ const ShopPage = async () => {
           <h1 className="text-center font-bold text-neutral-800 text-2xl my-6">
             Shop
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-center text-lg mb-6">
             Spend your points on cool stuff.
           </p>
+          <Items
+            hearts={userProgress.hearts}
+            points={userProgress.points}
+            hasActiveSubscription={false} // TODO: Add Subscription
+          />
         </div>
       </FeedWrapper>
     </div>
